@@ -28,7 +28,7 @@ pipeline {
         stage('Sonar ') {
        
        steps{
-           echo "Analyzing quality code -sonar"
+           echo "Analyzing quality code "
            bat 'mvn sonar:sonar '
        }
     }
