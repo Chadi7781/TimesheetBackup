@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout Git') {
             steps {
                 echo 'Pulling ...'
-                git branch: 'chaditroudi', url: 'https://github.com/Chadi7781/TimesheetBackup.git'
+                git branch: 'main', url: 'https://github.com/Chadi7781/TimesheetBackup.git'
             }
         }
         
