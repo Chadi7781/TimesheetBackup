@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout Git') {
+        stage('Checkout Git:') {
             steps {
                 echo 'Pulling ...'
                 git branch: 'main', url: 'https://github.com/Chadi7781/TimesheetBackup.git'
