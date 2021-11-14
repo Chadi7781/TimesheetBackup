@@ -2,7 +2,7 @@ pipeline {
     
        environment
 {
-registry = "chaditroudi/chaditroudi"
+registry = "a2500/chaditroudi"
 registryCredential= 'dockerHub'
 dockerImage = ''
 }
