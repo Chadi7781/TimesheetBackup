@@ -15,9 +15,14 @@ services:
   workaround:
     depends_on: 
       - workaround-mysql
+   build: 
+      context: "./"
+      dockerfile: "Dockerfile"
+    restart: on-failure
+    ports:
+      - 8087:8087
     restart: always
-    # will build ./Dockerfile
-    build: ./
+    
     volumes:
       - TimeSheetDevops
       - ~/.m2:/root/.m2
