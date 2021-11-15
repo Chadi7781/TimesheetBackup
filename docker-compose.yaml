@@ -15,10 +15,10 @@ services:
   workaround:
     depends_on: 
       - workaround-mysql
-   build: 
+    build: 
       context: "./"
       dockerfile: "Dockerfile"
-   restart: on-failure
+    restart: on-failure
     ports:
       - 8086:8086
     restart: always
