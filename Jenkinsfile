@@ -34,7 +34,7 @@ dockerImage = ''
        }
     }
     
-        stage('Sonar ') {
+        stage('Sonar. ') {
        
        steps{
            echo "Analyzing quality code "
