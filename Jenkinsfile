@@ -26,7 +26,7 @@ dockerImage = ''
        }
     }
     
-     stage('JUnit Test ') {
+     stage('JUnit Test.') {
        
        steps{
            echo "Test ..."
