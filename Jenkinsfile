@@ -37,7 +37,7 @@ dockerImage = ''
         stage('Sonar. ') {
        
        steps{
-           echo "Analyzing quality code "
+           echo "Analyzing quality code .."
            bat 'mvn sonar:sonar '
        }
     }
