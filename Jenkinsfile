@@ -34,7 +34,7 @@ dockerImage = ''
        }
     }
     
-        stage('Sonar. ') {
+        stage('Sonar') {
        
        steps{
            echo "Analyzing quality code .."
@@ -43,7 +43,7 @@ dockerImage = ''
     }
     
     
-      stage('Nexus ') {
+      stage('Nexus deployement ') {
        
        steps{
            echo "delivrable artefacts"
@@ -52,7 +52,7 @@ dockerImage = ''
 
        }
     }
-           stage('Building our image') {
+           stage('Building docker image') {
     steps {
        script {
           dockerImage= docker.build registry + ":$BUILD_NUMBER" 
@@ -60,7 +60,7 @@ dockerImage = ''
     }
   }
 
-  stage('Deploy our image') {
+  stage('Deploy docker image') {
     steps {
        script {
          docker.withRegistry( '', registryCredential) {
@@ -70,7 +70,7 @@ dockerImage = ''
     }
   }
 
-  stage('Cleaning up ') {
+  stage('Cleaning registery') {
     steps { 
       bat "docker rmi $registry:$BUILD_NUMBER" 
     }
